@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMICalculator.MainPage"
+             BackgroundColor="#181818">
+
+    <VerticalStackLayout VerticalOptions="Center" 
+                         Spacing="10" 
+                         Margin="10">
+        
+        <Label Text="BMI Calculator" 
+               TextColor="#CCCCCC" 
+               HorizontalTextAlignment="Center"
+               FontSize="30"
+               FontAttributes="Bold"
+               />
+        <Entry BackgroundColor="#2a2a2a"
+               TextColor="#CCCCCC"
+               Placeholder="Weight in kgs (e.g. 75)"
+               PlaceholderColor="#7d7c7c"
+               />
+        <Entry BackgroundColor="#2a2a2a"
+               TextColor="#CCCCCC"
+               Placeholder="Height in cm (e.g. 170)"
+               PlaceholderColor="#7d7c7c"
+               />
+        <Entry BackgroundColor="#2a2a2a"
+               TextColor="#CCCCCC"
+               Placeholder="Your BMI"
+               PlaceholderColor="#7d7c7c"
+               />
+        <Button Text="Submit" 
+                TextColor="White"
+                TextTransform="Uppercase"
+                BackgroundColor="#181818" 
+                BorderWidth="3" 
+                BorderColor="#5d29d6"
+                />
+    </VerticalStackLayout>
+
+</ContentPage>
