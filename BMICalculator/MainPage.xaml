@@ -5,7 +5,7 @@
              BackgroundColor="#181818">
 
     <VerticalStackLayout VerticalOptions="Center" 
-                         Spacing="10" 
+                         Spacing="25" 
                          Margin="10">
         
         <Label Text="BMI Calculator" 
@@ -14,17 +14,20 @@
                FontSize="30"
                FontAttributes="Bold"
                />
-        <Entry BackgroundColor="#2a2a2a"
+        <Entry x:Name="Weight"
+               BackgroundColor="#2a2a2a"
                TextColor="#CCCCCC"
                Placeholder="Weight in kgs (e.g. 75)"
                PlaceholderColor="#7d7c7c"
                />
-        <Entry BackgroundColor="#2a2a2a"
+        <Entry x:Name="Height"
+               BackgroundColor="#2a2a2a"
                TextColor="#CCCCCC"
                Placeholder="Height in cm (e.g. 170)"
                PlaceholderColor="#7d7c7c"
                />
-        <Entry BackgroundColor="#2a2a2a"
+        <Entry x:Name="BMI"
+               BackgroundColor="#2a2a2a"
                TextColor="#CCCCCC"
                Placeholder="Your BMI"
                PlaceholderColor="#7d7c7c"
@@ -35,6 +38,7 @@
                 BackgroundColor="#181818" 
                 BorderWidth="3" 
                 BorderColor="#5d29d6"
+                Clicked="Button_Clicked"
                 />
     </VerticalStackLayout>
 
