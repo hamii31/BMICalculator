@@ -26,9 +26,18 @@
 				height /= 100;
 			}
 
-			double imc = weight / (height * height);
+			double imc = 0.0;
 
-			BMI.Text = imc.ToString("F2");
+			if(weight == 0.0 || height == 0.0) // Checks if user has inputed the right values or any values at all
+			{
+				BMI.Text = imc.ToString("F2");
+			}
+			else
+			{
+				imc = weight / (height * height);
+
+				BMI.Text = imc.ToString("F2");
+			}
 
 			string result = GetBMIResultMessage(imc);
 			DisplayAlert("Result", result, "Ok");
@@ -36,7 +45,11 @@
 		
 		private string GetBMIResultMessage(double imc)
 		{
-			if(imc < UnderweightTreshold)
+			if(imc == 0.0)
+			{
+				return "Are you sure you wrote your weight and height correctly?";
+			}
+			else if(imc < UnderweightTreshold)
 			{
 				return "You are underweight. Consume more calories.";
 			}
