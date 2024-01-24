@@ -30,13 +30,10 @@
 
 			if(weight == 0.0 || height == 0.0) // Checks if user has inputed the right values or any values at all
 			{
-				BMI.Text = imc.ToString("F2");
 			}
 			else
 			{
 				imc = weight / (height * height);
-
-				BMI.Text = imc.ToString("F2");
 			}
 
 			string result = GetBMIResultMessage(imc);
@@ -51,19 +48,19 @@
 			}
 			else if(imc < UnderweightTreshold)
 			{
-				return "You are underweight. Consume more calories.";
+				return $"Your BMI is {imc:f2}. You are underweight. Consume more calories.";
 			}
 			else if(imc <= NormalWeightTreshold)
 			{
-				return "Your weight is normal. Continue eating the same.";
+				return $"Your BMI is {imc:f2}. Your weight is normal. Continue eating the same.";
 			}
 			else if(imc <= OverweightTreshold)
 			{
-				return "You are overweight. Take caution with your feeding habits.";
+				return $"Your BMI is {imc:f2}. You are overweight. Take caution with your feeding habits.";
 			}
 			else
 			{
-				return "You are obese. Restrict daily intake of calories.";
+				return $"Your BMI is {imc:f2}. You are obese. Restrict daily intake of calories.";
 			}
 			
 		}

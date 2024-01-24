@@ -26,12 +26,6 @@
                Placeholder="Height in cm (e.g. 170)"
                PlaceholderColor="#7d7c7c"
                />
-        <Entry x:Name="BMI"
-               BackgroundColor="#2a2a2a"
-               TextColor="#CCCCCC"
-               Placeholder="Your BMI"
-               PlaceholderColor="#7d7c7c"
-               />
         <Button Text="Submit" 
                 TextColor="White"
                 TextTransform="Uppercase"
